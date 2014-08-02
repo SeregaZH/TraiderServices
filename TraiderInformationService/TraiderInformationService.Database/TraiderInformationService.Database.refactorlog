@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="9de21cdf-ebb6-4bf5-80b2-52d038a63fa7" ChangeDateTime="08/02/2014 10:26:54">
+    <Property Name="ElementName" Value="[dbo].[Users].[Name]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Users]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Login" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="fa60f3ad-62e0-484d-adf0-1423583a142f" ChangeDateTime="08/02/2014 12:39:08">
+    <Property Name="ElementName" Value="[dbo].[Claims].[Value]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Claims]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ClaimTypeId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="8a12288a-31b5-4624-a96e-4885226aaf19" ChangeDateTime="08/02/2014 12:39:24">
+    <Property Name="ElementName" Value="[dbo].[Claims].[Name]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Claims]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Value" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="729c5c4f-62ed-44d5-8570-9e5c75dccdbc" ChangeDateTime="08/02/2014 13:21:09">
+    <Property Name="ElementName" Value="[dbo].[ClaimType].[TypeId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[ClaimType]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="TypeNumber" />
+  </Operation>
+</Operations>
