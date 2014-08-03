@@ -1,7 +1,8 @@
 ﻿CREATE TABLE [dbo].[Claim]
 (
 	[Id] UNIQUEIDENTIFIER NOT NULL , 
-    [Value] VARCHAR(MAX) NOT NULL, 
+    [Value] VARCHAR(MAX) NOT NULL,
+	[Identity] INT NULL, 
     [ClaimTypeId] UNIQUEIDENTIFIER NOT NULL, 
 	[ClaimTypeNumber] INT NOT NULL, 
     [UserId] UNIQUEIDENTIFIER NOT NULL,
