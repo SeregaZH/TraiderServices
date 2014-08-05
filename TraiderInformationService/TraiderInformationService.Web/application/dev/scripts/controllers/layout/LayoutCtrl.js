@@ -1,7 +1,7 @@
 'use strict';
 
-angular.module('applicationApp')
-  .controller('MainCtrl', function ($scope) {
+angular.module('traiderInformationApp')
+  .controller('LayoutCtrl', function ($scope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',

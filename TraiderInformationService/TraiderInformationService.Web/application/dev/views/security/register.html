@@ -1,0 +1,66 @@
+<div class="row">
+    <div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">
+        <div class="panel panel-default form-wall">
+            <div class="panel-heading">
+                    <h3 class="panel-title">Please sign up for Traider information service <small>It's free!</small></h3>
+            </div>
+                <div class="panel-body">
+                    <form name="registerForm">
+
+                        <div class="form-group">
+                            <input type="text" name="login"
+                                   class="form-control" placeholder="Login"
+                                   required ng-class="{'has-error': registerForm.login.$invalid}"
+                                   ng-model="model.login">
+                        </div>
+
+                        <div class="row">
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <input type="text" name="first_name"
+                                           class="form-control" placeholder="First Name"
+                                           ng-model="model.firstName">
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <input type="text" name="last_name"
+                                           class="form-control" placeholder="Last Name"
+                                           ng-model="model.lastName">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="email" name="email"
+                                   class="form-control" placeholder="Email"
+                                    required ng-class="{'has-error':registerForm.email.$invalid}"
+                                    ng-model="email">
+                        </div>
+
+                        <div class="row">
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <input type="password" name="password"
+                                           class="form-control" placeholder="Password"
+                                           required ng-class="{'has-error':registerForm.password.$invalid}"
+                                            ng-model="password">
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-6">
+                                <div class="form-group">
+                                    <input type="password" name="passwordConfirmation"
+                                           class="form-control" placeholder="Confirm Password"
+                                           required ng-class="{'has-error':registerForm.passwordConfirmation.$invalid}"
+                                            ng-model="confirmedPassword">
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn-lg btn-primary btn-block" ng-click="register()">
+                            Register
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+   </div>
