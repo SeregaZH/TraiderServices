@@ -117,6 +117,8 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="application\.gitattributes" />
+    <Content Include="application\.gitignore" />
     <Content Include="application\dev\404.html" />
     <Content Include="application\dev\bower_components\angular-cookies\angular-cookies.js" />
     <Content Include="application\dev\bower_components\angular-cookies\angular-cookies.min.js" />
@@ -264,9 +266,19 @@
     <Content Include="application\dev\index.html" />
     <Content Include="application\dev\robots.txt" />
     <Content Include="application\dev\scripts\app.js" />
-    <Content Include="application\dev\scripts\controllers\main.js" />
+    <Content Include="application\dev\scripts\controllers\dashboard\DashboardCtrl.js" />
+    <Content Include="application\dev\scripts\controllers\layout\AuthManagerCtrl.js" />
+    <Content Include="application\dev\scripts\controllers\layout\LayoutCtrl.js" />
+    <Content Include="application\dev\scripts\controllers\layout\NavigationCtrl.js" />
+    <Content Include="application\dev\scripts\controllers\MainCtrl.js" />
+    <Content Include="application\dev\scripts\controllers\security\LoginCtrl.js" />
+    <Content Include="application\dev\scripts\controllers\security\RegisterCtrl.js" />
     <Content Include="application\dev\styles\main.css" />
+    <Content Include="application\dev\styles\security\login.css" />
+    <Content Include="application\dev\styles\validation.css" />
     <Content Include="application\dev\views\main.html" />
+    <Content Include="application\dev\views\security\login.html" />
+    <Content Include="application\dev\views\security\register.html" />
     <Content Include="application\Gruntfile.js" />
     <Content Include="application\karma-e2e.conf.js" />
     <Content Include="application\karma.conf.js" />
@@ -8288,6 +8300,14 @@
     <Content Include="application\node_modules\time-grunt\node_modules\text-table\readme.markdown" />
     <Content Include="application\node_modules\time-grunt\package.json" />
     <Content Include="application\node_modules\time-grunt\readme.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="application\.bowerrc" />
+    <Content Include="application\.editorconfig" />
+    <Content Include="application\.jshintrc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="application\.travis.yml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
