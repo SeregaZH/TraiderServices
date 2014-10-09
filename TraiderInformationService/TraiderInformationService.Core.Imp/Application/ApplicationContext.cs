@@ -1,10 +1,8 @@
-﻿using TraiderInformationService.Core.Imp.Helpers;
-using TraiderInformationService.Core.Interfaces;
+﻿using TraiderInformationService.Core.Interfaces;
 using TraiderInformationService.Core.Interfaces.Application;
 using TraiderInformationService.Core.Interfaces.Configuration;
-using TraiderInformationService.Core.Interfaces.Configuration.Sections;
 
-namespace TraiderInformationService.Core.Imp.Application
+namespace TraiderInformationService.Core.Application
 {
   public class ApplicationContext : IApplicationContext
   {
@@ -25,9 +23,7 @@ namespace TraiderInformationService.Core.Imp.Application
     
     private void Init()
     {
-      var section = _configurationManager.GetSection<ApplicationConfigurationSection>(
-        ApplicationConfigurationSection.DefaultSectionName);
-      Mode = new ApplicationMode(section.GetActiveMode());
+      Mode = new ApplicationMode(_configurationManager.GetActiveMode());
     }
   }
 }

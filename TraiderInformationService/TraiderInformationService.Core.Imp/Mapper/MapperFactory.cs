@@ -2,7 +2,7 @@
 using TraiderInformationService.Core.Interfaces;
 using TraiderInformationService.Core.Interfaces.Mapper;
 
-namespace TraiderInformationService.Core.Imp.Mapper
+namespace TraiderInformationService.Core.Mapper
 {
   public class MapperFactory : IMapperFactory
   {

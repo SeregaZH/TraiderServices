@@ -9,7 +9,26 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TraiderInformationService.A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TraiderInformationService.Core.Interfaces", "TraiderInformationService.Core\TraiderInformationService.Core.Interfaces.csproj", "{7E59731C-4FEF-439C-87EA-A837A4B2DD03}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TraiderInformationService.Core.Imp", "TraiderInformationService.Core.Imp\TraiderInformationService.Core.Imp.csproj", "{6E8D2F38-F64D-4DA4-86B3-22C70A69ABF2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TraiderInformationService.Core", "TraiderInformationService.Core.Imp\TraiderInformationService.Core.csproj", "{6E8D2F38-F64D-4DA4-86B3-22C70A69ABF2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{A10868EE-48CD-4103-A0D1-24DB07D32FA3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TraiderInformationService.Core.Tests", "TraiderInformationService.Core.Tests\TraiderInformationService.Core.Tests.csproj", "{844A1C4D-12DA-410C-A739-A10BB31F762A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TraiderInformationService.Security.Model", "TraiderInformationService.Security.Model\TraiderInformationService.Security.Model.csproj", "{92050696-6953-4AAD-B8BC-2A6551EC1F16}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TraiderInformationService.Data.Security", "TraiderInformationService.Data.Security.Repositories\TraiderInformationService.Data.Security.csproj", "{F1F99656-8D6E-4333-A639-ACC0E2D20C63}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataAccess", "DataAccess", "{77B3480C-DCCF-4815-B363-5CCD5810F6FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TraiderInformationService.Providers.Interfaces", "TraiderInformationService.Providers.Interfaces\TraiderInformationService.Providers.Interfaces.csproj", "{44D7A142-4ACC-4C5F-B455-D4CECDBFAB20}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TraiderInformationService.Data.Security.Interfaces", "TraiderInformationService.Data.Security.Interfaces\TraiderInformationService.Data.Security.Interfaces.csproj", "{30AF0CEC-1387-4D64-A229-634213B7B120}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Config", "Config", "{BEDE23B1-473C-413F-8248-CA2C2A992237}"
+	ProjectSection(SolutionItems) = preProject
+		App.config = App.config
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,8 +58,34 @@ Global
 		{6E8D2F38-F64D-4DA4-86B3-22C70A69ABF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6E8D2F38-F64D-4DA4-86B3-22C70A69ABF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6E8D2F38-F64D-4DA4-86B3-22C70A69ABF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{844A1C4D-12DA-410C-A739-A10BB31F762A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{844A1C4D-12DA-410C-A739-A10BB31F762A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{844A1C4D-12DA-410C-A739-A10BB31F762A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{844A1C4D-12DA-410C-A739-A10BB31F762A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92050696-6953-4AAD-B8BC-2A6551EC1F16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92050696-6953-4AAD-B8BC-2A6551EC1F16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92050696-6953-4AAD-B8BC-2A6551EC1F16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92050696-6953-4AAD-B8BC-2A6551EC1F16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1F99656-8D6E-4333-A639-ACC0E2D20C63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1F99656-8D6E-4333-A639-ACC0E2D20C63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1F99656-8D6E-4333-A639-ACC0E2D20C63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1F99656-8D6E-4333-A639-ACC0E2D20C63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44D7A142-4ACC-4C5F-B455-D4CECDBFAB20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44D7A142-4ACC-4C5F-B455-D4CECDBFAB20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44D7A142-4ACC-4C5F-B455-D4CECDBFAB20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44D7A142-4ACC-4C5F-B455-D4CECDBFAB20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30AF0CEC-1387-4D64-A229-634213B7B120}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30AF0CEC-1387-4D64-A229-634213B7B120}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30AF0CEC-1387-4D64-A229-634213B7B120}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30AF0CEC-1387-4D64-A229-634213B7B120}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F1F99656-8D6E-4333-A639-ACC0E2D20C63} = {77B3480C-DCCF-4815-B363-5CCD5810F6FF}
+		{1F6529A0-57AA-4EE3-9E02-24C2A8AF7B79} = {77B3480C-DCCF-4815-B363-5CCD5810F6FF}
+		{30AF0CEC-1387-4D64-A229-634213B7B120} = {77B3480C-DCCF-4815-B363-5CCD5810F6FF}
+		{844A1C4D-12DA-410C-A739-A10BB31F762A} = {A10868EE-48CD-4103-A0D1-24DB07D32FA3}
 	EndGlobalSection
 EndGlobal

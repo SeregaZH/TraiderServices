@@ -1,7 +1,4 @@
-﻿using System.Web.Http;
-using System.Web.Mvc;
-using System.Web.Routing;
-using TraiderInformationService.Web.ViewEngines;
+﻿using TraiderInformationService.Web.App_Start;
 
 namespace TraiderInformationService.Web
 {
@@ -9,12 +6,8 @@ namespace TraiderInformationService.Web
   {
     protected void Application_Start()
     {
-      AreaRegistration.RegisterAllAreas();
-
-      WebApiConfig.Register(GlobalConfiguration.Configuration);
-      FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
-      RouteConfig.RegisterRoutes(RouteTable.Routes);
-      System.Web.Mvc.ViewEngines.Engines.Add(new AngularViewEngine());
+      var bootstrapper = new UiBootstrapper();
+      bootstrapper.Bootstrap();
     }
   }
 }

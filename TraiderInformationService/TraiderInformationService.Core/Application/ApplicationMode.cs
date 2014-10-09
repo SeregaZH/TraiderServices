@@ -1,5 +1,4 @@
-﻿using TraiderInformationService.Core.Interfaces.Configuration;
-using TraiderInformationService.Core.Interfaces.Configuration.Sections;
+﻿using TraiderInformationService.Core.Interfaces.Configuration.Sections;
 
 namespace TraiderInformationService.Core.Interfaces.Application
 {

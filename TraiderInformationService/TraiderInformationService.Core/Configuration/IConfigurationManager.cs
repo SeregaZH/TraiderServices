@@ -1,8 +1,9 @@
-﻿namespace TraiderInformationService.Core.Interfaces.Configuration
+﻿using TraiderInformationService.Core.Interfaces.Configuration.Sections;
+
+namespace TraiderInformationService.Core.Interfaces.Configuration
 {
   public interface IConfigurationManager
   {
-    TSection GetSection<TSection>(string name)
-      where TSection : class;
+    ApplicationModeElement GetActiveMode();
   }
 }
