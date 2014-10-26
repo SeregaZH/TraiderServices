@@ -3,6 +3,8 @@
   public enum ApplicationModes
   {
     Dev,
-    Prod
+    Prod,
+    Qa,
+    Local
   }
 }

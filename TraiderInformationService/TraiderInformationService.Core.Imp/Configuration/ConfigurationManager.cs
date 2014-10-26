@@ -23,7 +23,7 @@ namespace TraiderInformationService.Core.Configuration
         {
           if (result != null)
           {
-            throw new ConfigurationErrorsException("application modes can contain only one node");
+            throw new ConfigurationErrorsException("application modes can contain only one active node");
           }
 
           result = applicationModeNode;
@@ -35,7 +35,7 @@ namespace TraiderInformationService.Core.Configuration
       return result;
     }
 
-    private TSection GetSection<TSection>(string name) where TSection : class
+    private static TSection GetSection<TSection>(string name) where TSection : class
     {
       var configuration = System.Configuration.ConfigurationManager.GetSection(name) as TSection;
       if (configuration == null)

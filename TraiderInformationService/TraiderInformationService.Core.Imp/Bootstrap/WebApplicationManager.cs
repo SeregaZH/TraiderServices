@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TraiderInformationService.Core.Interfaces.Bootstrap;
-using TraiderInformationService.Core.Interfaces.Modularity;
+﻿using TraiderInformationService.Core.Interfaces.Modularity;
 using TraiderInformationService.Core.Modularity;
 
 namespace TraiderInformationService.Core.Bootstrap

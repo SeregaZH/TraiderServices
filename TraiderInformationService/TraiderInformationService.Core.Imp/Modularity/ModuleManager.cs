@@ -1,4 +1,5 @@
-﻿using TraiderInformationService.Core.Interfaces.Modularity;
+﻿using System;
+using TraiderInformationService.Core.Interfaces.Modularity;
 
 namespace TraiderInformationService.Core.Modularity
 {
@@ -6,7 +7,12 @@ namespace TraiderInformationService.Core.Modularity
   {
     public void InitializeModules(IModuleCatalog modulesCatalog)
     {
-      foreach(var catalog in modulesCatalog.GetModules())
+      if (modulesCatalog == null)
+      {
+        throw new ArgumentNullException("modulesCatalog");
+      }
+
+      foreach(var catalog in modulesCatalog)
       {
         catalog.Initialize();
       }

@@ -6,19 +6,19 @@ namespace TraiderInformationService.Core.Interfaces.Configuration.Sections
 {
   public class ApplicationModeElement : ConfigurationElement
   {
-    [ConfigurationProperty("name", DefaultValue = "", IsKey = true, IsRequired = true)]
+    [ConfigurationProperty("name", DefaultValue = ApplicationModes.Dev, IsKey = true, IsRequired = true)]
     public ApplicationModes Name
     {
       get
       {
         ApplicationModes result;
-        if(!Enum.TryParse(((string) base["name"]), out result))
+        if (!Enum.TryParse(((string)base["name"]), out result))
           throw new ConfigurationErrorsException("Can't construct mode name, application mode is invalid");
         return result;
       }
       set
       {
-        var newValue = Enum.GetName(typeof (ApplicationModes), value);
+        var newValue = Enum.GetName(typeof(ApplicationModes), value);
         base["name"] = newValue;
       }
     }

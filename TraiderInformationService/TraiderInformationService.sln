@@ -27,7 +27,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TraiderInformationService.D
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Config", "Config", "{BEDE23B1-473C-413F-8248-CA2C2A992237}"
 	ProjectSection(SolutionItems) = preProject
-		App.config = App.config
+		app.config = app.config
 	EndProjectSection
 EndProject
 Global

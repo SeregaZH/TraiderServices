@@ -1,4 +1,5 @@
-﻿using TraiderInformationService.Core.Interfaces;
+﻿using System;
+using TraiderInformationService.Core.Interfaces;
 using TraiderInformationService.Core.Interfaces.Application;
 using TraiderInformationService.Core.Interfaces.Configuration;
 
@@ -6,24 +7,26 @@ namespace TraiderInformationService.Core.Application
 {
   public class ApplicationContext : IApplicationContext
   {
+    private Lazy<ApplicationMode> _applicationMode;
     private readonly IConfigurationManager _configurationManager;
 
-    protected ApplicationContext()
-    {
-      Init();
-    }
-    
     public ApplicationContext(IConfigurationManager configurationManager)
-      :this()
     {
       _configurationManager = configurationManager;
+      Init();
     }
 
-    public ApplicationMode Mode { get; private set; }
-    
+    public ApplicationMode Mode
+    {
+      get
+      {
+        return _applicationMode.Value;
+      }
+    }
+
     private void Init()
     {
-      Mode = new ApplicationMode(_configurationManager.GetActiveMode());
+      _applicationMode = new Lazy<ApplicationMode>(() => new ApplicationMode(_configurationManager.GetActiveMode()));
     }
   }
 }
