@@ -2,21 +2,28 @@
 using TraiderInformationService.Core.Interfaces;
 using TraiderInformationService.Core.Interfaces.Application;
 using TraiderInformationService.Core.Interfaces.Configuration;
+using TraiderInformationService.Core.Interfaces.Configuration.Sections;
+using TraiderInformationService.Core.Interfaces.Mapper;
+using TraiderInformationService.Core.Mapping.Profiles;
 
 namespace TraiderInformationService.Core.Application
 {
   public class ApplicationContext : IApplicationContext
   {
-    private Lazy<ApplicationMode> _applicationMode;
+    private Lazy<IApplicationMode> _applicationMode;
     private readonly IConfigurationManager _configurationManager;
+    private readonly IMapperFactory _mapperFactory;
 
-    public ApplicationContext(IConfigurationManager configurationManager)
+    public ApplicationContext(
+      IConfigurationManager configurationManager, 
+      IMapperFactory mapperFactory)
     {
       _configurationManager = configurationManager;
+      _mapperFactory = mapperFactory;
       Init();
     }
 
-    public ApplicationMode Mode
+    public IApplicationMode Mode
     {
       get
       {
@@ -26,7 +33,14 @@ namespace TraiderInformationService.Core.Application
 
     private void Init()
     {
-      _applicationMode = new Lazy<ApplicationMode>(() => new ApplicationMode(_configurationManager.GetActiveMode()));
+      _applicationMode = new Lazy<IApplicationMode>(InitializeMode);
+    }
+
+    private IApplicationMode InitializeMode()
+    {
+      ApplicationModeElement configurationElement = _configurationManager.GetActiveMode();
+      IMapper mapper = _mapperFactory.CreateMapper(new CoreProfile());
+      return mapper.Map<ApplicationModeElement, IApplicationMode>(configurationElement);
     }
   }
 }

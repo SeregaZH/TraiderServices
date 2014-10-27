@@ -46,8 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Application\ApplicationMode.cs" />
     <Compile Include="Application\ApplicationModes.cs" />
+    <Compile Include="Application\IApplicationMode.cs" />
     <Compile Include="Bootstrap\IApplicationManager.cs" />
     <Compile Include="Configuration\IConfigurationManager.cs" />
     <Compile Include="Configuration\Sections\ApplicationConfigurationSection.cs" />

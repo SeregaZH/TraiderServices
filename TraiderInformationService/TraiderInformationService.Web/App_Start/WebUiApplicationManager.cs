@@ -24,7 +24,7 @@ namespace TraiderInformationService.Web.App_Start
       WebApiConfig.Register(GlobalConfiguration.Configuration);
       FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
       RouteConfig.RegisterRoutes(RouteTable.Routes);
-      System.Web.Mvc.ViewEngines.Engines.Add(new AngularViewEngine());
+      System.Web.Mvc.ViewEngines.Engines.Add(DependencyResolver.Current.GetService<AngularViewEngine>());
     }
   }
 }

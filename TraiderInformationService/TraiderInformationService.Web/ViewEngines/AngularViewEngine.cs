@@ -1,17 +1,17 @@
 ﻿using System.Web.Mvc;
+using TraiderInformationService.Core.Interfaces;
 
 namespace TraiderInformationService.Web.ViewEngines
 {
-  //todo inject application context 
   public class AngularViewEngine : VirtualPathProviderViewEngine  
   {
-    public AngularViewEngine()
+    public AngularViewEngine(IApplicationContext applicationContext)
     {
       ViewLocationFormats = new[]
       {
-        "~/application/dev/views/{1}/{0}.html",
-        "~/application/dev/views/{0}.html",
-        "~/application/dev/{0}.html"
+        "~/" + applicationContext.Mode.ViewUriPrefix +"/views/{1}/{0}.html",
+        "~/" + applicationContext.Mode.ViewUriPrefix +"/views/{0}.html",
+        "~/" + applicationContext.Mode.ViewUriPrefix +"/{0}.html"
       };
     }
 

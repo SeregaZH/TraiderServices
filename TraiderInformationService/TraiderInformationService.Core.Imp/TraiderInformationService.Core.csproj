@@ -94,14 +94,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Application\ApplicationContext.cs" />
+    <Compile Include="Application\ApplicationMode.cs" />
+    <Compile Include="Application\ApplicationModeWrapper.cs" />
     <Compile Include="Bootstrap\Bootstrapper.cs" />
     <Compile Include="Bootstrap\ModularityUnityBootstrapper.cs" />
     <Compile Include="Bootstrap\UnityMvcBootstrapper.cs" />
     <Compile Include="Bootstrap\WebApplicationManager.cs" />
+    <Compile Include="Bootstrap\WebUnityBootstrapper.cs" />
     <Compile Include="Configuration\ConfigurationManager.cs" />
     <Compile Include="Mapper\MapperFactory.cs" />
     <Compile Include="Mapper\MapperWrapper.cs" />
     <Compile Include="Mapping\Profiles\CoreProfile.cs" />
+    <Compile Include="Mapping\ValueResolvers\ModeNameValueResolver.cs" />
     <Compile Include="Modularity\ModularityApplicationManager.cs" />
     <Compile Include="Modularity\ModuleCatalog.cs" />
     <Compile Include="Modularity\ModuleManager.cs" />

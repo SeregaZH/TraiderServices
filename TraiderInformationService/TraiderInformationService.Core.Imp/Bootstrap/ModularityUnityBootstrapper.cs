@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.Practices.Unity;
+﻿using Microsoft.Practices.Unity;
 using TraiderInformationService.Core.Interfaces.Modularity;
 using TraiderInformationService.Core.Modularity;
 
@@ -9,8 +8,8 @@ namespace TraiderInformationService.Core.Bootstrap
   {
     protected override void ConfigureContainer(IUnityContainer container)
     {
-      container.RegisterInstance<IModuleCatalog>(new ModuleCatalog());
-      container.RegisterInstance<IModuleManager>(new ModuleManager());
+      container.RegisterType<IModuleCatalog, ModuleCatalog>(new ContainerControlledLifetimeManager());
+      container.RegisterType<IModuleManager, ModuleManager>(new ContainerControlledLifetimeManager());
     }
   }
 }
