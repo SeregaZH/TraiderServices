@@ -15,16 +15,16 @@ namespace TraiderInformationService.Core.Tests
     {
       var mockRepository = new MockRepository(MockBehavior.Default);
       var moduleCalalog = mockRepository.Create<IModuleCatalog>();
-      var mockModule = mockRepository.Create<IModule>();
+      var mockModuleInitializer = mockRepository.Create<IModuleInitializer>();
       
-      mockModule.Setup(t => t.Initialize());
+      mockModuleInitializer.Setup(t => t.IntializeModule(It.IsAny<IModuleInfo>()));
       moduleCalalog.Setup(t => t.GetEnumerator())
-        .Returns(new List<IModule> {mockModule.Object}.GetEnumerator());
-      var target = new ModuleManager();
+        .Returns(new List<IModuleInfo> { It.IsAny<IModuleInfo>() }.GetEnumerator());
+      var target = new ModuleManager(mockModuleInitializer.Object);
 
       target.InitializeModules(moduleCalalog.Object);
 
-      mockModule.Verify();
+      mockModuleInitializer.Verify();
     }
 
     [TestMethod]
@@ -32,7 +32,8 @@ namespace TraiderInformationService.Core.Tests
     public void ModulesInitializeFailInvalidCatalog()
     {
       IModuleCatalog invalidCatalog = null;
-      var target = new ModuleManager();
+      var mockModuleInitializer = new Mock<IModuleInitializer>();
+      var target = new ModuleManager(mockModuleInitializer.Object);
       target.InitializeModules(invalidCatalog);
     }
   }

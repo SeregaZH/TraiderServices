@@ -39,7 +39,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IClaimRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TraiderInformationService.Core\TraiderInformationService.Core.Interfaces.csproj">
+      <Project>{7E59731C-4FEF-439C-87EA-A837A4B2DD03}</Project>
+      <Name>TraiderInformationService.Core.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TraiderInformationService.Data.Model\TraiderInformationService.Data.Model.csproj">
+      <Project>{2CBF58B9-BEF2-4FCE-BF3A-E1023EB8B738}</Project>
+      <Name>TraiderInformationService.Data.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TraiderInformationService.Model.Interfaces\TraiderInformationService.Model.Interfaces.csproj">
+      <Project>{84E5C241-063F-4C10-8025-F3DE8F4E5C5A}</Project>
+      <Name>TraiderInformationService.Model.Interfaces</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -7,14 +7,14 @@ namespace TraiderInformationService.Core.Modularity
 {
   public class ModuleCatalog : IModuleCatalog
   {
-    private readonly LinkedList<IModule> _catalog;
+    private readonly LinkedList<IModuleInfo> _catalog;
 
     public ModuleCatalog()
     {
-      _catalog = new LinkedList<IModule>();
+      _catalog = new LinkedList<IModuleInfo>();
     }
 
-    public void RegisterModule(IModule module)
+    public void RegisterModule(IModuleInfo module)
     {
       if (module == null)
       {
@@ -24,7 +24,7 @@ namespace TraiderInformationService.Core.Modularity
       _catalog.AddLast(module);
     }
 
-    public IEnumerator<IModule> GetEnumerator()
+    public IEnumerator<IModuleInfo> GetEnumerator()
     {
       return _catalog.GetEnumerator();
     }

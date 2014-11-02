@@ -109,6 +109,8 @@
     <Compile Include="Modularity\ModularityApplicationManager.cs" />
     <Compile Include="Modularity\ModuleCatalog.cs" />
     <Compile Include="Modularity\ModuleManager.cs" />
+    <Compile Include="Modularity\ModuleInitializer.cs" />
+    <Compile Include="Modularity\UnityModuleCreator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

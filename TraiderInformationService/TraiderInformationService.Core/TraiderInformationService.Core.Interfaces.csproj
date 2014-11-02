@@ -53,12 +53,18 @@
     <Compile Include="Configuration\Sections\ApplicationConfigurationSection.cs" />
     <Compile Include="Configuration\Sections\ApplicationModeElement.cs" />
     <Compile Include="Configuration\Sections\ApplicationModesCollection.cs" />
+    <Compile Include="DataAccess\IModifyRepository.cs" />
+    <Compile Include="DataAccess\IReadRepository.cs" />
+    <Compile Include="DataAccess\IRemovableRepository.cs" />
     <Compile Include="IApplicationContext.cs" />
     <Compile Include="IMapperFactory.cs" />
     <Compile Include="Mapper\IMapper.cs" />
     <Compile Include="Mapper\ProfileBase.cs" />
     <Compile Include="Modularity\IModule.cs" />
     <Compile Include="Modularity\IModuleCatalog.cs" />
+    <Compile Include="Modularity\IModuleCreator.cs" />
+    <Compile Include="Modularity\IModuleInfo.cs" />
+    <Compile Include="Modularity\IModuleInitializer.cs" />
     <Compile Include="Modularity\IModuleManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

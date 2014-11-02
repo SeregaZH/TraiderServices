@@ -10,6 +10,8 @@ namespace TraiderInformationService.Core.Bootstrap
     {
       container.RegisterType<IModuleCatalog, ModuleCatalog>(new ContainerControlledLifetimeManager());
       container.RegisterType<IModuleManager, ModuleManager>(new ContainerControlledLifetimeManager());
+      container.RegisterType<IModuleInitializer, ModuleInitializer>(new ContainerControlledLifetimeManager());
+      container.RegisterType<IModuleCreator, UnityModuleCreator>(new ContainerControlledLifetimeManager());
     }
   }
 }

@@ -2,8 +2,8 @@
 
 namespace TraiderInformationService.Core.Interfaces.Modularity
 {
-  public interface IModuleCatalog : IEnumerable<IModule>
+  public interface IModuleCatalog : IEnumerable<IModuleInfo>
   {
-    void RegisterModule(IModule module);
+    void RegisterModule(IModuleInfo module);
   }
 }

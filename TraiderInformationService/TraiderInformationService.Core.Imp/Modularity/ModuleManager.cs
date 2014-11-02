@@ -5,6 +5,13 @@ namespace TraiderInformationService.Core.Modularity
 {
   public class ModuleManager : IModuleManager
   {
+    private readonly IModuleInitializer _moduleInitializer;
+
+    public ModuleManager(IModuleInitializer moduleInitializer)
+    {
+      _moduleInitializer = moduleInitializer;
+    }
+
     public void InitializeModules(IModuleCatalog modulesCatalog)
     {
       if (modulesCatalog == null)
@@ -14,7 +21,7 @@ namespace TraiderInformationService.Core.Modularity
 
       foreach(var catalog in modulesCatalog)
       {
-        catalog.Initialize();
+        _moduleInitializer.IntializeModule(catalog);
       }
     }
   }

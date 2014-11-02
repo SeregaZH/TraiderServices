@@ -13,7 +13,7 @@ namespace TraiderInformationService.Core.Tests
     [TestMethod]
     public void ModuleRegisterSuccess()
     {
-      var module = new Mock<IModule>();
+      var module = new Mock<IModuleInfo>();
       var target = new ModuleCatalog();
       target.RegisterModule(module.Object);
       Assert.IsTrue(target.Any());
@@ -23,7 +23,7 @@ namespace TraiderInformationService.Core.Tests
     [ExpectedException(typeof (ArgumentNullException))]
     public void ModuleRegisterFail_InvalidModuleReference()
     {
-      IModule module = null;
+      IModuleInfo module = null;
       var target = new ModuleCatalog();
       target.RegisterModule(module);
     }
